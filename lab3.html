@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		function over(){
+			
+				document.getElementById("TrialText").style.color = "red";	
+			}
+
+		function out(){
+				document.getElementById("TrialText").style.color = "black";
+			}
+		function bgChange(bg){
+			document.body.style.backgroundColor = bg;
+		}
+
+		function showdatetime(){
+			var date = new Date();
+			var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+			var current_time = date.getHours()+"-"+(date.getMinutes())+"-"+date.getSeconds();
+			document.getElementById("date").innerHTML = current_date;
+			document.getElementById("time").innerHTML = current_time;
+		}
+		function showKeyCode(){
+			var x= document.getElementById("alpha_value").value;
+
+			if(x=='a'||x=='e'||x=='i'||x=='o'||x=='u'||x=='A'||x=='E'||x=='I'||x=='O'||x=='U'){
+
+				alert("Vowel is Pressed");
+			}
+			document.body.style.backgroundColor = "red";
+		}
+
+	</script>
+
+	<title>LAB-3</title>
+</head>
+<body>
+	<h1 align=center>LAB-3</h1>
+	<hr/>
+
+	<h1 id="TrialText" onmouseover="over()" onmouseout="out()">Trial-Text</h1>
+
+	<hr/>
+
+	<button id="bg_red" onclick="bgChange('red')">Red</button> 
+	<button id="bg_green" onclick="bgChange('green')">Green</button>
+
+	<hr/>
+
+	<button  onclick="showdatetime()">Date-Time</button>
+	<br/>
+	<h2 id="date">Current Date: </h2>
+	<h2 id="time">Current Time: </h2>
+
+	<hr/>
+	<form>
+		<h3>Enter Alphabets : </h3>
+		<input id="alpha_value" onkeydown="showKeyCode()" onkeyChange="showKeyCode()"name="Alpha"/>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+h1 {
+    color: darkmagenta;
+    font-family: sans-serif;
+}
+a:link {
+    font-weight: 500;
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+table, th, td {
+    border: 2px solid black; 
+}
+
+tr:nth-child(even){
+    background-color: lightblue;
+
+}
+tr:nth-child(odd){
+    background-color: lightpink;
+}
+
+p {
+    color: green;
+    text-indent: 50px;
+    text-transform: uppercase;
+}
+
+.tablerc {
+    text-align: center;
+    font-weight: 500;
+}

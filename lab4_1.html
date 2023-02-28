@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter number : </h1>
+    <input type="text" id="number">
+    <button onclick="odd_even()">Submit</button>
+    <h3 id="output"></h3>
+
+    <script>
+        function odd_even(){
+            var n = document.getElementById("number").value;
+            if(n%2==0){
+                document.getElementById("output").innerHTML="Number is even";
+                alert("Number is even");
+            }
+            else{
+                document.getElementById("number").innerHTML="Number is odd";
+                alert("Number is odd");
+            }
+        }
+    </script>
+</body>
+</html>

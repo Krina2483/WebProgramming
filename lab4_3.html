@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter number of terms in fibonacci series : </h1>
+    <input type="text" id="terms">
+    <button onclick="fibonacci()">Submit</button>
+
+    <script>
+        function fibonacci(){
+            var n = document.getElementById("terms").value;
+            var term1=0,term2=1,term3;
+            if (n==1){
+                document.write("0");
+            }
+            if (n==2){
+                document.write("0 1");
+            }
+            else{
+                document.write("0 1 ");
+                for(i=3; i<=n; i++){
+                   term3=term1+term2;
+                   term1=term2;
+                   term2=term3; 
+                   document.write(term3+" ");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
